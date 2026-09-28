@@ -1,0 +1,18 @@
+# Private source material stays on this computer.
+/素材/**
+!/素材/**/
+!/素材/**/.gitkeep
+/data/private/**
+!/data/private/.gitkeep
+/本地预览/
+.env
+.env.*
+!.env.example
+node_modules/
+# The buildless website in dist is source and is tracked.
+.sites-runtime/
+*.tar.gz
+*.tgz
+.DS_Store
+Thumbs.db
+*.log
