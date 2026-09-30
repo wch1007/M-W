@@ -2,6 +2,8 @@
 
 为 2026 年 12 月 20 日张蔓的生日准备的手机端故事长页，记录从认识到相聚的日常。
 
+正式网页：[https://wch1007.github.io/M-W/](https://wch1007.github.io/M-W/)。GitHub Pages 从 `main` 根目录发布；根目录 `index.html` 展示故事页面，`.nojekyll` 禁用 README 的 Jekyll 页面生成。
+
 当前阶段：手机长页已补充 15 段故事、21 个相聚日，以及从 2026 年 5 月 18 日开始的实时相伴计时。使用薄荷绿、米白和淡杏色。发布状态见 `docs/发布说明.md`。完整可读聊天导出仍未完成。
 
 ## 已确认的时间
@@ -51,3 +53,5 @@
 计时从北京时间 2026-05-18 00:00:00 起按已过去的时间递增，每秒刷新；2026-09-30 零点为 135 天。日期验证运行 `node --test tests/dates.test.cjs`。
 
 精选网页照片另存到 `dist/photos/`，在 `photos` 中填写 `src`、`alt`、`caption`，有图片时照片章节自动显示。照片原图仍保留在本地 `素材/照片原图/`。
+
+修改 `dist/index.html` 后运行 `node scripts/prepare-pages.cjs` 同步根入口，再提交并推送到 `main`。`node scripts/prepare-pages.cjs --check` 检查入口是否同步。脚本与样式继续由 `dist/` 提供，图片路径相对于 `dist/` 解析。当前正式发布使用 GitHub Pages，不再依赖 Sites；旧的 `.openai/hosting.json` 仅保留历史关联。
