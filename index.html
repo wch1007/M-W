@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="dist/style.css">
   <script src="dist/content.js" defer></script>
   <script src="dist/dates.js" defer></script>
+  <script src="dist/memories.js" defer></script>
+  <script src="dist/places.js" defer></script>
   <script src="dist/app.js" defer></script>
 </head>
 <body>
@@ -30,14 +32,8 @@
       <div class="first-layout"><div class="date-art" aria-label="五月十八日"><span>MAY</span><strong>18</strong><small>一个新的开始</small></div><div class="chapter-copy"><p class="eyebrow">IT STARTED WITH A HELLO</p><h2 id="beginning-title">你好，<br>张蔓。</h2><p>2026 年 5 月 18 日，<br>我们添加了彼此的微信。</p><p>后来，“你”与“我”，<br>有了一个共同的名字：我们。</p><a class="text-link" href="#first-date">故事继续 <span aria-hidden="true">↓</span></a></div></div>
     </section>
 
-    <section class="chapter stories-section" id="stories" aria-labelledby="stories-title">
-      <div class="section-kicker"><span>02 / 一路走来的小事</span><span><b id="story-count">15</b> 段我们的回忆</span></div>
-      <div class="stories-heading"><p class="eyebrow">LITTLE MOMENTS, OUR STORY</p><h2 id="stories-title">见面时的我们。<br>想念时，也是我们。</h2><p>从清华园的初见，到北京的团圆饭。</p></div>
-      <div id="story-timeline"></div>
-    </section>
-
     <section class="chapter calendar-section" id="calendar" aria-labelledby="calendar-title">
-      <div class="section-kicker"><span>03 / 把相聚的日子圈起来</span><span>OUR LITTLE CALENDAR</span></div>
+      <div class="section-kicker"><span>02 / 把相聚的日子圈起来</span><span>OUR LITTLE CALENDAR</span></div>
       <div class="calendar-heading"><div><p class="eyebrow">EVERY DAY TOGETHER COUNTS</p><h2 id="calendar-title">想见你。<br>也见到了你。</h2></div><p>异地的日常里，<br>每个相聚的日子都值得被记住。</p></div>
       <div class="calendar-layout">
         <div class="calendar-card">
@@ -48,6 +44,19 @@
         </div>
         <div class="day-details" aria-live="polite" aria-atomic="true"><p class="eyebrow" id="selected-date"></p><h3 id="selected-title"></h3><p id="selected-description"></p><a id="selected-link" class="text-link" href="#first-date">读这一天的故事 <span aria-hidden="true">↗</span></a><div class="record-count"><strong id="meeting-count">1</strong><span>个相聚日，已写进日历</span></div><p class="calendar-footnote">日历会随我们的回忆，慢慢补全。</p></div>
       </div>
+      <div class="places-card" aria-labelledby="places-title">
+        <div class="places-heading"><div><p class="eyebrow">SOMEWHERE, WITH YOU</p><h3 id="places-title">这一天，我们在哪里？</h3></div><label class="date-picker">换一个日子<input id="location-date" type="date" min="2026-05-01" max="2026-12-31"></label></div>
+        <div class="map-shortcuts" aria-label="地点回忆快捷日期"><button type="button" data-map-date="2026-05-31">北京 · 初见</button><button type="button" data-map-date="2026-06-17">六月 · 都在新疆</button><button type="button" data-map-date="2026-07-17">杭州 · 相见</button><button type="button" data-map-date="2026-09-09">九月 · 新疆与杭州</button></div>
+        <div class="places-layout"><div class="map-frame"><svg id="places-map" viewBox="0 0 720 400" role="img" aria-labelledby="map-title map-description"><title id="map-title">两个人的城市位置示意</title><desc id="map-description"></desc><image id="map-land" width="720" height="400"/><g id="map-cities"></g><g id="map-positions"></g></svg><span class="map-caption">城市 / 地区示意 · 不显示具体住址</span></div><div class="location-panel" aria-live="polite"><p class="eyebrow" id="map-day-label"></p><div id="location-people"></div><p id="map-status"></p></div></div>
+        <p class="map-footnote">按当天聊天线索和已确认的相聚日期整理，不是实时定位。灰色虚线标记仅代表最近一次记录，不代表当天仍在那里；同一地区也不等于见面。聊天线索截至 2026.09.30。<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">底图：Natural Earth</a>（仅陆地轮廓，无行政边界）。</p>
+      </div>
+    </section>
+
+    <section class="chapter stories-section" id="stories" aria-labelledby="stories-title">
+      <div class="section-kicker"><span>03 / 一路走来的小事</span><span><b id="story-count">15</b> 段相聚与纪念 · <b id="memory-count">40</b> 则聊天小事</span></div>
+      <div class="stories-heading"><p class="eyebrow">LITTLE MOMENTS, OUR STORY</p><h2 id="stories-title">大事记在日历。<br>小事，藏在每一句里。</h2><p class="story-intro">从“我是张快快”，到清华园第一次见面；从捧花、看电影和毕业典礼，到北京与杭州之间的来来回回。后来，新疆也成了想念的坐标。我们聊奶茶几分糖，聊晚饭和微波炉，互相叫睡王，也认真说晚安。原来一路走来，不只有值得圈起来的日子，还有这些只有我们才懂的小事。</p><p class="excerpt-note">下面是聊天原话节选，按北京时间归档；小标题与导语为整理文字。月份默认收起，点开慢慢看。</p></div>
+      <div class="story-tools"><span>把回忆，一月一月打开。</span><button id="toggle-months" type="button">展开全部月份</button></div>
+      <div id="story-timeline"></div>
     </section>
 
     <section id="photos" class="chapter photo-section" hidden aria-labelledby="photos-title"><div class="section-kicker"><span>04 / 一些小小的日常</span><span>COLLECTING OUR MOMENTS</span></div><h2 id="photos-title">这一刻，<br>想留很久。</h2><div id="photo-grid" class="photo-grid"></div></section>
