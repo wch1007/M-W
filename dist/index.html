@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#792b40">
+  <meta name="theme-color" content="#eaf4ee">
   <meta name="robots" content="noindex,nofollow">
   <meta name="description" content="王城昊与张蔓，从五月十八日开始的故事。把每一次相聚、每一个平凡日子，慢慢写成我们。">
   <title>M & W · 把日常写成我们</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23792b40'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='43' font-family='serif' fill='%23fff8f3'%3E%26%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23eaf4ee'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='43' font-family='serif' fill='%233d725e'%3E%26%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
   <script src="content.js" defer></script>
+  <script src="dates.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -18,7 +19,8 @@
   <main id="top">
     <section class="cover" aria-labelledby="cover-title">
       <div class="cover-top"><span>写给蔓蔓的日常集</span><span>VOL. 01 / 2026</span></div>
-      <div class="cover-title"><p class="eyebrow">THE DAYS THAT BECAME US</p><h1 id="cover-title">把日常<br>写成<span class="us">我们<span class="little-star" aria-hidden="true">✳</span></span>。</h1></div>
+      <div class="cover-main"><div class="cover-title"><p class="eyebrow">THE DAYS THAT BECAME US</p><h1 id="cover-title">把日常<br>写成<span class="us">我们</span>。</h1></div>
+      <div class="together-clock" role="timer" aria-live="off" aria-label="从2026年5月18日零点开始的相伴时间"><p>我们在一起</p><div class="together-days"><strong id="together-days">—</strong><span>天</span></div><div class="together-time"><span><b id="together-hours">—</b>小时</span><span><b id="together-minutes">—</b>分</span><span><b id="together-seconds">—</b>秒</span></div><p class="clock-note">始于 2026.05.18 · 时间还在继续</p></div></div>
       <div class="cover-bottom"><p>从一句你好开始，<br>把想念，慢慢写成相见。</p><a class="round-link" href="#beginning" aria-label="向下阅读我们的故事">↓</a></div>
       <div class="cover-index"><span>始于 05.18</span><span>TO MAN, WITH LOVE</span><span>写给 12.20</span></div>
     </section>
@@ -28,10 +30,10 @@
       <div class="first-layout"><div class="date-art" aria-label="五月十八日"><span>MAY</span><strong>18</strong><small>一个新的开始</small></div><div class="chapter-copy"><p class="eyebrow">IT STARTED WITH A HELLO</p><h2 id="beginning-title">你好，<br>张蔓。</h2><p>2026 年 5 月 18 日，<br>我们添加了彼此的微信。</p><p>后来，“你”与“我”，<br>有了一个共同的名字：我们。</p><a class="text-link" href="#first-date">故事继续 <span aria-hidden="true">↓</span></a></div></div>
     </section>
 
-    <section class="chapter date-chapter" id="first-date" aria-labelledby="first-date-title">
-      <div class="section-kicker"><span>02 / 从聊天框，到你身旁</span><time datetime="2026-05-31">2026.05.31</time></div>
-      <div class="date-title"><span class="outline-number" aria-hidden="true">31</span><p class="eyebrow">OUR FIRST DATE</p><h2 id="first-date-title">第一次，<br>见到你。</h2><p>五月的最后一天，<br>也是我们的第一次约会。</p></div>
-      <div class="date-footer"><span>五月，留下了两个起点。</span><span>05.18 <i>—</i> 05.31</span></div>
+    <section class="chapter stories-section" id="stories" aria-labelledby="stories-title">
+      <div class="section-kicker"><span>02 / 一路走来的小事</span><span><b id="story-count">15</b> 段我们的回忆</span></div>
+      <div class="stories-heading"><p class="eyebrow">LITTLE MOMENTS, OUR STORY</p><h2 id="stories-title">见面时的我们。<br>想念时，也是我们。</h2><p>从清华园的初见，到北京的团圆饭。</p></div>
+      <div id="story-timeline"></div>
     </section>
 
     <section class="chapter calendar-section" id="calendar" aria-labelledby="calendar-title">
